@@ -183,7 +183,7 @@ Threshold: 0.5 (default)
 
 </div>
 
-[imágenes de training_curves.png](results/training_curves.png)
+![imágenes de training_curves.png](results/training_curves.png)
 
 **Observaciones**:
 - ✅ Train Loss converge suavemente (0.20 → 0.04)
@@ -202,7 +202,7 @@ Threshold: 0.5 (default)
 
 </div>
 
-[imagen de confusion_matrix_test.png](results/confusion_matrix_test.png)
+![imagen de confusion_matrix_test.png](results/confusion_matrix_test.png)
 
 #### 💊 Interpretación Clínica
 
@@ -253,7 +253,7 @@ True Positives (TP) = 388
 
 </div>
 
-[imágenes de sample_images.png](results/sample_images.png)
+![imágenes de sample_images.png](results/sample_images.png)
 
 **Características Visibles**:
 - **Normal**: Campos pulmonares transparentes, contornos definidos
@@ -267,7 +267,7 @@ True Positives (TP) = 388
 
 </div>
 
-[imagen de batch_sample.png](results/batch_sample.png)
+![imagen de batch_sample.png](results/batch_sample.png)
 
 **Transformaciones Aplicadas**:
 - ✅ Horizontal Flip (50%)
