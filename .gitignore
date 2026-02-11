@@ -68,6 +68,9 @@ results/*
 !results/confusion_matrix_test.png
 !results/sample_images.png
 !results/batch_sample.png
+!results/gradcam_1_NORMAL_pred_PNEUMONIA.png
+!results/gradcam_3_PNEUMONIA_pred_PNEUMONIA.png
+!results/gradcam_4_PNEUMONIA_pred_PNEUMONIA.png
 !results/.gitkeep
 
 # Ignore large files
